@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "version": 1
+  },
+  "name": "Common Ground Electronics OSHW IPN Library",
+  "description": "A KiCad database library containing internal part number symbols",
+  "source": {
+    "type": "odbc",
+    "dsn": "",
+    "username": "",
+    "password": "",
+    "timeout_seconds": 2,
+    "connection_string": "Driver={SQLite3 ODBC Driver};Database=${CWD}/../databases/CGND_OSHW_Aligni.sqlite"
+  },
+  "libraries": [
+    {
+      "name": "",
+      "table": "parts",
+      "key": "partnumber",
+      "symbols": "x_kicad_symbols",
+      "footprints": "x_kicad_footprints",
+      "fields": [
+        {
+          "column": "x_display_value",
+          "name": "Value",
+          "visible_on_add": false,
+          "visible_in_chooser": false,
+          "show_name": false,
+          "inherit_properties": true
+        },
+        {
+          "column": "x_aligni_part_url",
+          "name": "Datasheet",
+          "visible_on_add": false,
+          "visible_in_chooser": false,
+          "show_name": false,
+          "inherit_properties": true
+        },
+        {
+          "column": "partnumber",
+          "name": "IPN",
+          "visible_on_add": true,
+          "visible_in_chooser": true,
+          "show_name": false,
+          "inherit_properties": true
+        }
+      ],
+      "properties": {
+        "description": "description",
+        "keywords": "x_keywords",
+        "exclude_from_bom": "x_exclude_from_bom",
+        "exclude_from_board": "x_exclude_from_board",
+        "exclude_from_sim": "x_exclude_from_sim"
+      }
+    }
+  ]
+}
